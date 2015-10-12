@@ -34,9 +34,9 @@
             this.groupBoxCapacity = new System.Windows.Forms.GroupBox();
             this.groupBoxAccessories = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.labelOurName = new System.Windows.Forms.Label();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton6s = new System.Windows.Forms.RadioButton();
@@ -51,10 +51,18 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.labelBasePrice = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelAccessories = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.labelSubTotal = new System.Windows.Forms.Label();
+            this.labelTrade = new System.Windows.Forms.Label();
+            this.labelTax = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBoxiPhoneSelection.SuspendLayout();
             this.groupBoxModel.SuspendLayout();
             this.groupBoxColour.SuspendLayout();
@@ -126,9 +134,17 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.textBox6);
+            this.groupBox6.Controls.Add(this.textBox5);
+            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.labelTotal);
+            this.groupBox6.Controls.Add(this.labelTax);
+            this.groupBox6.Controls.Add(this.labelTrade);
+            this.groupBox6.Controls.Add(this.labelSubTotal);
             this.groupBox6.Controls.Add(this.textBox2);
             this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.labelAccessories);
             this.groupBox6.Controls.Add(this.labelBasePrice);
             this.groupBox6.Location = new System.Drawing.Point(489, 147);
             this.groupBox6.Name = "groupBox6";
@@ -137,32 +153,34 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Cost";
             // 
-            // button1
+            // buttonCalculate
             // 
-            this.button1.Location = new System.Drawing.Point(452, 449);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Location = new System.Drawing.Point(452, 449);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
+            this.buttonCalculate.TabIndex = 3;
+            this.buttonCalculate.Text = "&Calculate";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonClear
             // 
-            this.button2.Location = new System.Drawing.Point(562, 448);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonClear.Location = new System.Drawing.Point(562, 448);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 4;
+            this.buttonClear.Text = "C&lear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // button3
+            // buttonExit
             // 
-            this.button3.Location = new System.Drawing.Point(663, 449);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonExit.Location = new System.Drawing.Point(663, 449);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 5;
+            this.buttonExit.Text = "E&xit";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // labelOurName
             // 
@@ -309,15 +327,15 @@
             this.labelBasePrice.TabIndex = 0;
             this.labelBasePrice.Text = "Base Price";
             // 
-            // label3
+            // labelAccessories
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Accessories";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labelAccessories.AutoSize = true;
+            this.labelAccessories.Location = new System.Drawing.Point(7, 51);
+            this.labelAccessories.Name = "labelAccessories";
+            this.labelAccessories.Size = new System.Drawing.Size(64, 13);
+            this.labelAccessories.TabIndex = 1;
+            this.labelAccessories.Text = "Accessories";
+            this.labelAccessories.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox1
             // 
@@ -333,18 +351,84 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
             // 
+            // labelSubTotal
+            // 
+            this.labelSubTotal.AutoSize = true;
+            this.labelSubTotal.Location = new System.Drawing.Point(7, 111);
+            this.labelSubTotal.Name = "labelSubTotal";
+            this.labelSubTotal.Size = new System.Drawing.Size(50, 13);
+            this.labelSubTotal.TabIndex = 4;
+            this.labelSubTotal.Text = "SubTotal";
+            // 
+            // labelTrade
+            // 
+            this.labelTrade.AutoSize = true;
+            this.labelTrade.Location = new System.Drawing.Point(8, 142);
+            this.labelTrade.Name = "labelTrade";
+            this.labelTrade.Size = new System.Drawing.Size(78, 13);
+            this.labelTrade.TabIndex = 5;
+            this.labelTrade.Text = "(Less) &Trade In";
+            // 
+            // labelTax
+            // 
+            this.labelTax.AutoSize = true;
+            this.labelTax.Location = new System.Drawing.Point(6, 173);
+            this.labelTax.Name = "labelTax";
+            this.labelTax.Size = new System.Drawing.Size(48, 13);
+            this.labelTax.TabIndex = 6;
+            this.labelTax.Text = "13% Tax";
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Location = new System.Drawing.Point(7, 224);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(31, 13);
+            this.labelTotal.TabIndex = 7;
+            this.labelTotal.Text = "Total";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(85, 104);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(85, 135);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 9;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(85, 166);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 10;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(85, 217);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 11;
+            // 
             // FormiPhonePurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 512);
             this.Controls.Add(this.labelOurName);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBoxAccessories);
             this.Controls.Add(this.groupBoxiPhoneSelection);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "FormiPhonePurchase";
             this.Text = "Robellus iPhone Purchase Tool";
             this.groupBoxiPhoneSelection.ResumeLayout(false);
@@ -372,9 +456,9 @@
         private System.Windows.Forms.GroupBox groupBoxModel;
         private System.Windows.Forms.GroupBox groupBoxAccessories;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label labelOurName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButton128;
@@ -388,11 +472,19 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelAccessories;
         private System.Windows.Forms.Label labelBasePrice;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label labelTax;
+        private System.Windows.Forms.Label labelTrade;
+        private System.Windows.Forms.Label labelSubTotal;
     }
 }
 

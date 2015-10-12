@@ -21,5 +21,15 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
